@@ -1,0 +1,20 @@
+div.items a { 
+    color: green;
+    font-weight: bold;
+}
+
+p + p {
+ font-weight: bold;
+font-style: italic;
+ }
+
+h1, h2, p{
+ background: rgb(0, 170, 255);
+ }
+ 
+
+ a:hover {
+    color: #2990d4;
+    text-decoration: 
+        underline overline;
+ }

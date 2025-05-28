@@ -1,0 +1,130 @@
+body {
+    font-family: 'Montserrat', sans-serif; /* Sử dụng font Montserrat */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Đảm bảo chiều cao tối thiểu để căn giữa theo chiều dọc */
+    background-color: #2c2c2c; /* Màu nền tổng thể, có thể thay đổi để khớp với hình ảnh */
+    background-image: url('image/background.jpg'); /* Thay thế bằng ảnh nền của bạn */
+    background-size: cover;
+    background-position: center;
+    color: #fff; /* Màu chữ mặc định */
+}
+
+.pricing-container {
+    display: flex; /* Sắp xếp các thẻ giá theo chiều ngang */
+    gap: 30px; /* Khoảng cách giữa các thẻ giá */
+    flex-wrap: wrap; /* Cho phép xuống dòng trên màn hình nhỏ */
+    justify-content: center; /* Căn giữa các thẻ giá khi xuống dòng */
+    padding: 20px;
+}
+
+.pricing-card {
+    background-color: rgba(34, 34, 34, 0.9); /* Màu nền của thẻ giá, có độ trong suốt */
+    border-radius: 8px;
+    padding: 30px;
+    width: 300px; /* Chiều rộng cố định cho mỗi thẻ */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Hiệu ứng hover */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Đẩy nội dung lên trên và nút xuống dưới */
+    min-height: 500px; /* Đảm bảo chiều cao tối thiểu để các thẻ đồng đều */
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px); /* Nâng thẻ lên một chút khi hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.card-title {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.card-description {
+    font-size: 0.95em;
+    color: #b0b0b0;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.price {
+    font-size: 3em;
+    font-weight: 700;
+    color: #39ff14; /* Màu xanh lá cây nổi bật cho giá */
+    margin-bottom: 30px;
+}
+
+.features-list {
+    list-style: none; /* Bỏ dấu chấm mặc định của list */
+    padding: 0;
+    margin-bottom: 40px;
+    text-align: left; /* Căn trái các mục trong list */
+    flex-grow: 1; /* Cho phép danh sách tính năng chiếm không gian còn lại */
+}
+
+.features-list li {
+    margin-bottom: 15px;
+    color: #d0d0d0;
+    font-size: 1em;
+    position: relative;
+    padding-left: 25px; /* Để tạo khoảng trống cho icon (nếu có) */
+}
+
+/* Bạn có thể thêm icon dấu tick vào đây nếu muốn */
+.features-list li::before {
+    content: ''; /* hoặc '✔' nếu bạn muốn dấu tích */
+    /* font-family: 'Font Awesome 5 Free'; /* Nếu bạn dùng Font Awesome */
+    /* font-weight: 900; */
+    /* content: '\f00c'; /* Mã unicode cho dấu tích */
+    color: #39ff14;
+    position: absolute;
+    left: 0;
+    top: 2px;
+}
+
+
+.contact-button {
+    background-color: #39ff14; /* Màu nền của nút */
+    color: #2c2c2c; /* Màu chữ của nút */
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    align-self: center; /* Căn giữa nút */
+}
+
+.contact-button:hover {
+    background-color: #2eaf0f; /* Màu nền nút khi hover */
+    color: #fff; /* Màu chữ nút khi hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .pricing-container {
+        flex-direction: column; /* Xếp chồng các thẻ khi màn hình nhỏ hơn */
+        align-items: center; /* Căn giữa các thẻ */
+    }
+}
+
+@media (max-width: 768px) {
+    .pricing-card {
+        width: 85%; /* Chiều rộng thẻ lớn hơn trên màn hình nhỏ */
+        max-width: 400px;
+    }
+    .price {
+        font-size: 2.5em;
+    }
+    .card-title {
+        font-size: 1.6em;
+    }
+}

@@ -1,0 +1,49 @@
+body {
+    display: flex;
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center;     /* Căn giữa theo chiều dọc */
+    min-height: 100vh;       /* Đảm bảo body chiếm toàn bộ chiều cao màn hình */
+    margin: 0;
+    background-color: #f0f0f0; /* Màu nền tổng thể */
+}
+
+.container {
+    position: relative; /* Quan trọng: Thiết lập bối cảnh định vị cho các box con */
+    width: 300px; /* Điều chỉnh kích thước container nếu cần */
+    height: 300px;
+}
+
+.box {
+    width: 200px;   /* Chiều rộng của mỗi hình vuông */
+    height: 200px;  /* Chiều cao của mỗi hình vuông */
+    border: 2px solid black; /* Viền đen */
+    position: absolute; /* Quan trọng: Cho phép định vị các box tự do trong container */
+    box-sizing: border-box; /* Đảm bảo padding/border không làm tăng kích thước tổng thể */
+    display: flex; /* Dùng flexbox để căn giữa văn bản */
+    flex-direction: column; /* Xếp văn bản theo chiều dọc */
+    justify-content: center; /* Căn giữa văn bản theo chiều dọc */
+    align-items: center; /* Căn giữa văn bản theo chiều ngang */
+    text-align: center; /* Đảm bảo văn bản không tràn ra ngoài */
+    padding: 10px; /* Khoảng đệm cho văn bản */
+}
+
+.gray-box {
+    background-color: #6a6a6a; /* Màu xám */
+    z-index: 1; /* Đảm bảo hộp xám nằm dưới hộp đỏ */
+    top: 0;
+    left: 0;
+}
+
+.red-box {
+    background-color: rgba(189, 45, 80, 0.7); /* Màu đỏ/hồng có độ trong suốt */
+    z-index: 2; /* Đảm bảo hộp đỏ nằm trên hộp xám */
+    top: 50px;   /* Di chuyển hộp đỏ xuống dưới 50px */
+    left: 50px;  /* Di chuyển hộp đỏ sang phải 50px */
+}
+
+.red-box p {
+    color: white; /* Màu chữ trắng cho văn bản */
+    margin: 5px 0; /* Khoảng cách giữa các dòng văn bản */
+    font-family: serif; /* Dùng font serif như trong hình */
+    font-size: 1.1em;
+}

@@ -1,0 +1,71 @@
+body {
+    display: flex;
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center;     /* Căn giữa theo chiều dọc */
+    min-height: 100vh;       /* Đảm bảo body chiếm toàn bộ chiều cao màn hình */
+    margin: 0;
+    font-family: Arial, sans-serif; /* Font chữ dễ đọc */
+    background-color: #f0f0f0; /* Màu nền nhẹ */
+    color: #333;
+}
+
+.outer-div {
+    width: 200px; /* Chiều rộng cố định như trong hình */
+    min-height: 120px; /* Chiều cao tối thiểu, điều chỉnh nếu cần */
+    border: 2px dashed #a0a0a0; /* Viền nét đứt màu xám như hình */
+    padding: 20px; /* Khoảng cách từ viền đến nội dung */
+    display: flex;
+    flex-direction: column; /* Xếp các phần tử con theo chiều dọc */
+    justify-content: space-between; /* Đẩy nội dung và inner-div ra hai đầu */
+    align-items: center; /* Căn giữa văn bản và inner-div theo chiều ngang */
+    box-sizing: border-box; /* Đảm bảo padding không làm tăng tổng chiều rộng */
+    position: relative; /* Để có thể vẽ các mũi tên nếu muốn */
+    color: #000; /* Màu chữ cho Outer-div */
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.inner-div {
+    /* Sử dụng calc() để tính chiều rộng: 100% của cha (outer-div) trừ đi 20px */
+    width: calc(100% - 20px);
+    min-height: 50px; /* Chiều cao tối thiểu, điều chỉnh nếu cần */
+    border: 2px solid #87ceeb; /* Viền màu xanh nhạt như hình */
+    background-color: rgba(255, 255, 255, 0.8); /* Nền trắng hơi trong suốt */
+    display: flex;
+    justify-content: center; /* Căn giữa văn bản theo chiều ngang */
+    align-items: center;     /* Căn giữa văn bản theo chiều dọc */
+    box-sizing: border-box; /* Đảm bảo padding/border không làm tăng tổng chiều rộng */
+    color: #000; /* Màu chữ cho Inner-div */
+    font-size: 1.1em;
+}
+
+/* Phần tạo mũi tên (tùy chọn, phức tạp hơn một chút) */
+/* Để đơn giản, tôi sẽ chỉ tạo một hình tam giác đơn giản. 
+   Để tạo mũi tên phức tạp như hình, bạn có thể cần SVG hoặc nhiều pseudo-elements. */
+/* left arrow */
+.outer-div::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -20px; /* Điều chỉnh vị trí mũi tên */
+    transform: translateY(-50%) rotate(45deg);
+    width: 15px;
+    height: 15px;
+    border-left: 10px solid #8B4513; /* Màu nâu */
+    border-top: 10px solid #8B4513; /* Màu nâu */
+    z-index: 10;
+}
+
+/* right arrow */
+.outer-div::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -20px; /* Điều chỉnh vị trí mũi tên */
+    transform: translateY(-50%) rotate(45deg);
+    width: 15px;
+    height: 15px;
+    border-right: 10px solid #8B4513; /* Màu nâu */
+    border-bottom: 10px solid #8B4513; /* Màu nâu */
+    z-index: 10;
+}
