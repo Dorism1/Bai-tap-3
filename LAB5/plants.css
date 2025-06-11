@@ -1,0 +1,501 @@
+/* Thêm vào plants.css */
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 20px 40px 0 40px;
+    background: #fff;
+    font-family: Arial, sans-serif;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-right: 40px;
+}
+
+.logo img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.logo span {
+    font-size: 1.5rem;
+    color: #184c3a;
+    font-weight: bold;
+}
+
+.logo b {
+    color: #4caf50;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 32px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #222;
+    font-size: 1.05rem;
+    padding: 6px 0;
+    transition: color 0.2s;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+    color: #4caf50;
+    font-weight: bold;
+}
+
+.dropdown > a span {
+    font-size: 0.8em;
+    margin-left: 4px;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 32px;
+    left: 0;
+    background: #fff;
+    min-width: 180px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+    border-radius: 4px;
+    z-index: 100;
+    padding: 0;
+}
+
+.dropdown:hover > .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li {
+    position: relative;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 12px 20px;
+    color: #222;
+    white-space: nowrap;
+    transition: background 0.2s, color 0.2s;
+}
+
+.dropdown-menu a:hover,
+.dropdown-menu .deep-dropdown > a {
+    background: #eaf5ea;
+    color: #4caf50;
+}
+
+.deep-dropdown > a span {
+    float: right;
+    font-size: 0.9em;
+}
+
+.deep-dropdown-menu {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    background: #fff;
+    min-width: 200px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+    border-radius: 4px;
+    z-index: 200;
+    padding: 0;
+}
+
+.deep-dropdown:hover > .deep-dropdown-menu {
+    display: block;
+}
+
+.deep-dropdown-menu a {
+    padding: 12px 20px;
+    color: #222;
+}
+
+.deep-dropdown-menu a:hover {
+    background: #eaf5ea;
+    color: #4caf50;
+}
+
+body {
+    background: #f3faf7;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 40px 0 0 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.content {
+    flex: 1;
+    padding: 0 0 0 36px;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #184c3a;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.subtitle {
+    color: #555;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+}
+
+.features {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.features li {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    color: #184c3a;
+}
+
+.check {
+    color: #1ca21c;
+    font-size: 1.3rem;
+    margin-right: 10px;
+}
+
+.contact-btn {
+    background: #1ca21c;
+    color: #fff;
+    border: none;
+    padding: 14px 36px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.contact-btn:hover {
+    background: #158a15;
+}
+
+.image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 36px;
+}
+
+.image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 18px;
+    object-fit: cover;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+}
+
+/* Thêm vào cuối plants.css */
+
+.services-section {
+    margin: 60px 0 0 0;
+    padding: 0 30px;
+}
+
+.services-title {
+    color: #1ca21c;
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+    font-weight: 400;
+}
+
+.services-heading {
+    text-align: center;
+    font-size: 2.3rem;
+    font-family: 'Georgia', serif;
+    font-weight: 400;
+    margin-bottom: 36px;
+    color: #222;
+}
+
+.services-list {
+    display: flex;
+    gap: 0;
+    justify-content: center;
+    background: #fff;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: none;
+    border: 1px solid #eee;
+}
+
+.service-card {
+    flex: 1;
+    background: #fff;
+    border-right: 1px solid #eee;
+    padding: 32px 24px 24px 24px;
+    position: relative;
+    min-width: 220px;
+}
+
+.service-card:last-child {
+    border-right: none;
+}
+
+.service-icon {
+    height: 60px;
+    margin-bottom: 18px;
+}
+
+.service-icon img {
+    height: 60px;
+    width: auto;
+    filter: grayscale(100%) brightness(0) saturate(100%) invert(34%) sepia(98%) saturate(748%) hue-rotate(77deg) brightness(97%) contrast(92%);
+}
+
+.service-number {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    color: #e0e0e0;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.service-card h4 {
+    margin: 0 0 10px 0;
+    font-size: 1.2rem;
+    color: #184c3a;
+    font-weight: 500;
+}
+
+.service-card p {
+    margin: 0;
+    color: #444;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.newsletter-section {
+    background: #fafafa;
+    margin: 48px 0 0 0;
+    padding: 36px 0;
+}
+
+.newsletter-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+}
+
+.newsletter-content > div h3 {
+    font-family: 'Georgia', serif;
+    font-size: 2rem;
+    color: #22334a;
+    margin-bottom: 8px;
+    font-weight: 400;
+}
+
+.newsletter-content > div p {
+    color: #666;
+    margin: 0;
+    font-size: 1rem;
+}
+
+.newsletter-form {
+    display: flex;
+    width: 480px;
+    max-width: 100%;
+}
+
+.newsletter-form input[type="email"] {
+    flex: 1;
+    padding: 14px 16px;
+    border: 2px solid #184c3a;
+    border-right: none;
+    border-radius: 4px 0 0 4px;
+    font-size: 1.1rem;
+    outline: none;
+}
+
+.newsletter-form button {
+    background: #1ca21c;
+    color: #fff;
+    border: none;
+    padding: 0 32px;
+    font-size: 1.1rem;
+    border-radius: 0 4px 4px 0;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.newsletter-form button:hover {
+    background: #158a15;
+}
+
+@media (max-width: 900px) {
+    .services-list {
+        flex-direction: column;
+    }
+    .service-card {
+        border-right: none;
+        border-bottom: 1px solid #eee;
+    }
+    .service-card:last-child {
+        border-bottom: none;
+    }
+    .newsletter-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .newsletter-form {
+        width: 100%;
+    }
+}
+
+/* Thêm vào cuối plants.css */
+
+.footer {
+    background: #181818;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin-top: 40px;
+}
+
+.footer-main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 36px 32px 24px 32px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-col {
+    flex: 1 1 180px;
+    min-width: 180px;
+    margin-right: 24px;
+    margin-bottom: 24px;
+}
+
+.footer-col h2 {
+    font-family: 'Georgia', serif;
+    font-size: 2rem;
+    margin: 0 0 16px 0;
+    font-weight: 500;
+}
+
+.footer-col h3 {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 12px;
+    border-bottom: 2px solid #1ca21c;
+    display: inline-block;
+    padding-bottom: 2px;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 8px;
+}
+
+.footer-col ul li a {
+    color: #bdbdbd;
+    text-decoration: none;
+    transition: color 0.2s;
+    font-size: 1rem;
+}
+
+.footer-col ul li a:hover {
+    color: #1ca21c;
+}
+
+.footer-col p {
+    color: #ccc;
+    font-size: 1rem;
+    margin: 0;
+    line-height: 1.7;
+}
+
+.footer-col strong {
+    color: #fff;
+}
+
+.footer-bottom {
+    background: #111;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 32px;
+    font-size: 1rem;
+    flex-wrap: wrap;
+}
+
+.footer-bottom a {
+    color: #1ca21c;
+    text-decoration: none;
+}
+
+.footer-social a {
+    display: inline-block;
+    background: #222;
+    border-radius: 4px;
+    margin-left: 6px;
+    padding: 4px 6px;
+    transition: background 0.2s;
+}
+
+.footer-social a:hover {
+    background: #1ca21c;
+}
+
+.footer-social img {
+    width: 22px;
+    height: 22px;
+    vertical-align: middle;
+    filter: brightness(0) invert(1);
+}
+
+@media (max-width: 900px) {
+    .footer-main {
+        flex-direction: column;
+        padding: 32px 16px 16px 16px;
+    }
+    .footer-col {
+        margin-right: 0;
+    }
+    .footer-bottom {
+        flex-direction: column;
+        gap: 12px;
+        padding: 14px 16px;
+        text-align: center;
+    }
+}
